@@ -87,7 +87,7 @@ class Mage_Core_Model_Session_Abstract_Varien extends Varien_Object
             'httponly' => $cookie->getHttponly()
         );
 
-        if (!$cookieParams['httponly']) {
+        /*if (!$cookieParams['httponly']) {
             unset($cookieParams['httponly']);
             if (!$cookieParams['secure']) {
                 unset($cookieParams['secure']);
@@ -99,7 +99,7 @@ class Mage_Core_Model_Session_Abstract_Varien extends Varien_Object
 
         if (isset($cookieParams['domain'])) {
             $cookieParams['domain'] = $cookie->getDomain();
-        }
+        }*/
 
         call_user_func_array('session_set_cookie_params', $cookieParams);
 
